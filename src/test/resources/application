@@ -1,0 +1,4 @@
+database.driver-class-name=com.mysql.cj.jdbc.Driver
+database.url=jdbc:mysql://${env:APP_SHOP_DB_HOST}:${env:APP_SHOP_DB_PORT}/${env:APP_SHOP_DB_NAME}?serverTimezone=UTC
+database.username=${env:APP_SHOP_DB_USER}
+database.password=${env:APP_SHOP_DB_PASSWORD}

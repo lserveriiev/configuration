@@ -1,0 +1,17 @@
+#!/bin/bash
+
+export CONF_TEST_ENV_RESOLVER=_
+export CONF_TEST_DB_HOST=127.0.0.1
+export CONF_TEST_DB_PORT=3306
+export CONF_TEST_DB_NAME=test
+export CONF_TEST_DB_USER=test
+export CONF_TEST_DB_PASSWORD=test
+
+mvn clean install
+
+unset CONF_TEST_ENV_RESOLVER
+unset CONF_TEST_DB_HOST
+unset CONF_TEST_DB_PORT
+unset CONF_TEST_DB_NAME
+unset CONF_TEST_DB_USER
+unset CONF_TEST_DB_PASSWORD

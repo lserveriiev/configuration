@@ -1,0 +1,8 @@
+language: java
+jdk:
+  - openjdk11
+provider: script
+script: bash scripts/deploy.sh
+cache:
+  directories:
+    - $HOME/.m2

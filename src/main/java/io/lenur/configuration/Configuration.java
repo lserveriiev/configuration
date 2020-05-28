@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Configuration {
+    private static final String regex = "\\|+";
     private static final Map<String, Map<String, String>> properties = new HashMap<>();
     private final String fileName;
 
@@ -24,6 +25,16 @@ public class Configuration {
         Map<String, String> fileConfig = properties.get(fileName);
 
         return fileConfig.get(key);
+    }
+
+    public String[] getAsStringArray(String key, String regex) {
+        String value = get(key);
+
+        return value.split(regex);
+    }
+
+    public String[] getAsStringArray(String key) {
+        return getAsStringArray(key, regex);
     }
 
     private void init() {

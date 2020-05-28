@@ -45,6 +45,8 @@ public class Application {
         Configuration configuration = new Configuration("application.properties");
         System.out.println(configuration.get("database.username"));
         System.out.println(configuration.get("database.url"));
+        String[] tech = configuration.getAsStringArray("technology.stack");//returns an array splitted by regex. default delimiter is | 
+        String[] tech1 = configuration.getAsStringArray("technology.stack.regex", ",");//pass own delimiter
     }
 }
 ```

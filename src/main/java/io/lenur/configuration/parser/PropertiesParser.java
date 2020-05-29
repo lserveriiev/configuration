@@ -12,8 +12,8 @@ import java.util.Map;
 public class PropertiesParser implements Parsable {
     @Override
     public Map<String, String> load(File file) {
-        if (file == null) {
-            return null;
+        if (file == null || !file.exists()) {
+            return new HashMap<>();
         }
 
         final Map<String, String> properties = new HashMap<>();

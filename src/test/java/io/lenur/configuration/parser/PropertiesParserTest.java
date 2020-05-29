@@ -15,7 +15,7 @@ public class PropertiesParserTest {
         PropertiesParser propertiesParser = new PropertiesParser();
         Map<String, String> properties = propertiesParser.load(null);
 
-        Assert.assertNull(properties);
+        Assert.assertEquals(0, properties.size());
     }
 
     @Test
